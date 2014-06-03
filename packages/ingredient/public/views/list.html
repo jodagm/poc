@@ -1,0 +1,16 @@
+<section data-ng-controller="IngredientsController" data-ng-init="find()">
+    <ul class="ingredients unstyled">
+        <li data-ng-repeat="ingredient in ingredients">
+            <h2>
+                <a data-ng-href="#!/ingredients/{{ingredient._id}}">{{ingredient.name}}</a>
+                <a class="btn" href="/#!/ingredients/{{ingredient._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn" data-ng-click="remove(ingredient);">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </h2>
+        </li>
+    </ul>
+    <h1 data-ng-hide="!ingredients || ingredients.length">No ingredients yet. <br> Why don't you <a href="/#!/ingredients/create">Create One</a>?</h1>
+</section>

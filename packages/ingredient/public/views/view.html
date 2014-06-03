@@ -1,0 +1,11 @@
+<section data-ng-controller="IngredientsController" data-ng-init="findOne()">
+    <h2>{{ingredient.name}}</h2>
+    <div data-ng-if="hasAuthorization(ingredient)">
+        <a class="btn" href="/#!/ingredients/{{ingredients._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove(ingredient);">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+</section>
